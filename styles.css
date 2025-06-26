@@ -1,0 +1,74 @@
+/* styles.css */
+
+/* Smooth transitions on hover for list items */
+li {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #f0f9ff; /* light blue */
+  transform: scale(1.02);
+}
+
+/* Completed tasks */
+.line-through.text-gray-400 {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+/* Scrollbar styling */
+#taskList::-webkit-scrollbar {
+  width: 6px;
+}
+#taskList::-webkit-scrollbar-thumb {
+  background-color: #94a3b8; /* Tailwind's slate-400 */
+  border-radius: 8px;
+}
+#taskList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Input and Button enhancements */
+input#taskInput {
+  transition: box-shadow 0.2s ease;
+}
+
+input#taskInput:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4); /* blue-500 focus ring */
+}
+
+/* Add button styling */
+button#addBtn {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button#addBtn:hover {
+  transform: translateY(-1px);
+  background-color: #2563eb; /* Tailwind's blue-600 */
+}
+
+/* Action buttons (complete & delete) */
+button.text-green-500:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+button.text-red-500:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 400px) {
+  input#taskInput {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  button#addBtn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
